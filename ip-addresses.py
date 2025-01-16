@@ -42,7 +42,8 @@ class RegularExpressions(object):
             self.s.pop()
             return model[self.diff]
         else: 
-            return None 
+            self.s.pop()
+            return result 
 
     def compare(self, regex1, regex2):
         """Returns a string (self.diff) that matches regex1 but not regex2"""
@@ -57,6 +58,7 @@ class RegularExpressions(object):
             self.s.pop()
             return model[self.diff]
         else: 
+            self.s.pop()
             return result
 
 if __name__ == "__main__":
